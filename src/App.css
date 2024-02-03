@@ -40,3 +40,17 @@
 .read-the-docs {
   color: #888;
 }
+
+#login-form{
+
+  border: 2px solid red;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  
+  
+}
+#pass{
+  margin-left:6px
+}
+
