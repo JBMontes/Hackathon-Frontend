@@ -41,9 +41,9 @@ const FetchLocation = () => {
       }
     };
   
-    useEffect(() => {
-      handleSearch();
-    }, [userLocation]);
+    // useEffect(() => {
+    //   handleSearch();
+    // }, [userLocation]);
     
     return (
       <div className='application'>
