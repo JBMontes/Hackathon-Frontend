@@ -1,12 +1,11 @@
 import { useState } from 'react'
-
 import './App.css'
+import FetchLocation from './Components/FetchLocation'
 
 function App() {
 
-
   return (
- <h1>Hi</h1>
+ <FetchLocation />
   )
 }
 
