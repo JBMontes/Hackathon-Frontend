@@ -7,11 +7,11 @@ import GoogleMapsComponent from './GoogleMaps';
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 const FetchLocation = () => {
-    const [places, setPlaces] = useState([]);
+    const [locations, setLocations] = useState([]);
     const [userLocation, setUserLocation] = useState(null);
     const [userAddress, setUserAddress] = useState('');
   
-    const endpoint = 'http://localhost:3001/places';
+    const endpoint = 'https://hackathon-backend-j9e3.onrender.com/keypins';
   
     const getUserLocation = async () => {
       if (navigator.geolocation) {
@@ -40,10 +40,20 @@ const FetchLocation = () => {
         console.error('Geolocation is not supported by this browser.');
       }
     };
+
+    useEffect(() => {
+      const fetchLocations = async () => {
+        try {
+          const response = await axios.get('https://hackathon-backend-blmb.onrender.com/keypins');
+          setLocations(response.data);
+        } catch (error) {
+          console.error('Error fetching locations:', error);
+        }
+      };
   
-    // useEffect(() => {
-    //   handleSearch();
-    // }, [userLocation]);
+      fetchLocations();
+    }, []);
+  
     
     return (
       <div className='application'>
@@ -56,12 +66,12 @@ const FetchLocation = () => {
           
   
         <div className="map-container">
-        <GoogleMapsComponent places={places} userLocation={userLocation} userAddress={userAddress} />
+        <GoogleMapsComponent locations={locations} userLocation={userLocation} userAddress={userAddress} />
       </div>
         
         
         {/* <ul>
-          {places.map((place, index) => (
+          {locations.map((place, index) => (
             <li key={index}>
               {place.name}
             </li>

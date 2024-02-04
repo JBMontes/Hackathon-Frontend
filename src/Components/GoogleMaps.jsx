@@ -89,7 +89,7 @@ const tronMapStyles = [
 ];
 
 
-const GoogleMapsComponent = ({ places, userLocation, userAddress }) => {
+const GoogleMapsComponent = ({ locations, userLocation }) => {
   const API_KEY = import.meta.env.VITE_API_KEY
   
   const center = userLocation && typeof userLocation.latitude === 'number' && typeof userLocation.longitude === 'number'
@@ -98,8 +98,8 @@ const GoogleMapsComponent = ({ places, userLocation, userAddress }) => {
   
   const [selectedMarker, setSelectedMarker] = useState(null);
 
-  const onMarkerClick = (place) => {
-    setSelectedMarker(place);
+  const onMarkerClick = (location) => {
+    setSelectedMarker(location);
   };
 
   const onInfoWindowClose = () => {
@@ -108,7 +108,7 @@ const GoogleMapsComponent = ({ places, userLocation, userAddress }) => {
   
 
   // const blackMarkerIcon = {
-  //   url: 'marker6.svg',
+  //   url: 'metal-key.png',
   //   scaledSize: new window.google.maps.Size(40, 40),
   // };
 
@@ -130,21 +130,20 @@ const GoogleMapsComponent = ({ places, userLocation, userAddress }) => {
           />
         )}
 
-        {places.map((place, index) => (
+{locations.map((location, index) => (
           <Marker
             key={index}
-            position={{ lat: place.geometry.location.lat, lng: place.geometry.location.lng }}
-            title={place.name}
-            onClick={() => onMarkerClick(place)}
+            position={{ lat: location.latitude, lng: location.longitude }}
+            title={location.name}
+            onClick={() => onMarkerClick(location)} 
           />
-          
         ))}
         
         {selectedMarker && (
           <InfoWindow
             position={{
-              lat: selectedMarker.geometry.location.lat,
-              lng: selectedMarker.geometry.location.lng,
+              lat: selectedMarker.latitude,
+              lng: selectedMarker.longitude,
             }}
             onCloseClick={onInfoWindowClose}
           >
@@ -158,8 +157,8 @@ const GoogleMapsComponent = ({ places, userLocation, userAddress }) => {
       <p>No photo available</p>
     )}
               <h3>Name: {selectedMarker.name}</h3>
-              <h3>Location: {selectedMarker.vicinity}</h3>
-              <h3>Rating: {selectedMarker.rating}</h3>
+              <h3>Location: {selectedMarker.color}</h3>
+              <h3>Rating: {selectedMarker.comment}</h3>
              
             </div>
           </InfoWindow>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import '/Users/shakalivingstonepursuit/Hackathon-FrontEnd/Hackathon-Frontend/src/App.css'
+import '/src/App.css'
 
 
 
