@@ -4,7 +4,6 @@
   padding: 2rem;
   text-align: center;
 }
-
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -12,12 +11,11 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #1e0b78c4);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -26,41 +24,48 @@
     transform: rotate(360deg);
   }
 }
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
-
 .card {
   padding: 2em;
 }
-
 .read-the-docs {
   color: #888;
 }
-
 #login-form{
-
   border: 2px solid red;
   text-align: center;
   padding: 10px;
-  position: fixed;
-  
-  
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 5px;
+  /* position: fixed; */
 }
 #pass{
   margin-left:6px
 }
-
-
 #name,#color,#comment{
   /* padding:20px; */
   margin-bottom: 10px;
-  
-
+}
 h3{
   color: black;
-
+}
+.navbar-brand{
+  font-size: xx-large;
+  color:rgb(252,163,17);
+  font-family: 'Inter', sans-serif;
+}
+.body{
+  background-color: black;
+}
+.userAddress{
+  font-size: large ;
+  color:rgb(252,163,17);
 }

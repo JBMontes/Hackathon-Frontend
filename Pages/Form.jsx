@@ -46,11 +46,12 @@ const CreateCard = () => {
 
   return (
     <>
+    
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name"> Name:</label>
+        <label htmlFor="name"> Location Name:</label>
         <input id="name" value={name} type="text" onChange={(e)=>{setName(e.target.value)}}  />
         <br />
-        <label htmlFor="color">Color:</label>
+        <label htmlFor="color">Location Color Theme:</label>
         <input id="color" value={color} type="text" onChange={(e)=>{setColor(e.target.value)}}  />
         <label htmlFor="address">Address:</label>
         <input id="address"  value={address}type="text" onChange={(e)=>{setAddress(e.target.value)}}  />
@@ -58,7 +59,7 @@ const CreateCard = () => {
         <label htmlFor="comment">Comment:</label>
         <textarea id="comment"  value={comment}type="text" onChange={(e)=>{setComment(e.target.value)}}></textarea>
         <br />
-        <button type="submit">Create Post</button>
+        <button type="submit">Create Pin</button>
         <br />
       </form>
     </>

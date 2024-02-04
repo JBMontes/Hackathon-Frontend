@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import '/src/App.css'
+import FetchLocation from "./FetchLocation";
 
 
 
@@ -43,7 +44,7 @@ const LoginForm =()=>{
 
     </form>
     
-    
+    <FetchLocation />
     </>)
     
 
