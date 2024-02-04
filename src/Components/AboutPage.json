@@ -1,0 +1,54 @@
+
+[
+
+    {
+         "id": 1,
+         "name": "Bethany Torres",
+         "pic": "https://media.licdn.com/dms/image/C4D03AQFIDiiW64gyyw/profile-displayphoto-shrink_400_400/0/1642786267685?e=1712793600&v=beta&t=UMfO0pLdoME6lXuaf0Q3OaQvosUE3qRprzgp0DgR-7A",
+         "hometown": "Manhattan, USA",
+         "github": "https://github.com/figgeryboo"
+    },
+
+   
+     {
+        "id": 2,
+        "name": "Jackie Cheung",
+        "pic": "https://ca.slack-edge.com/TCVA3PF24-U04SNRQ12BG-f3d935e29801-512",
+        "hometown": "Queens, USA",
+        "github": "https://github.com/JackieC1993"
+    
+    },
+
+{
+     "id": 3,
+     "name": "Jeremy Montes",
+     "pic": "https://avatars.githubusercontent.com/u/129802356?v=4",
+     "hometown": "Harlem, USA",
+     "github": "https://github.com/JBMontes"
+    
+},
+
+  {
+      "id": 4,
+      "name": "Shaka Livingstone",
+      "pic": "https://ca.slack-edge.com/TCVA3PF24-U04SVADK8FM-219eefbec815-512",
+      "hometown": "Booklyn, USA",
+      "github": "https://github.com/ShakaPursuit"
+      
+  },
+
+  {
+    "id": 5,
+    "name": "Christine Marchese",
+    "pic": "https://ca.slack-edge.com/TCVA3PF24-U03CPAZUYAW-a39dea2fadc1-512",
+    "hometown": "Queens, USA",
+    "github": "https://github.com/ChristineMarchese"
+}
+
+]
+
+
+  
+
+
+

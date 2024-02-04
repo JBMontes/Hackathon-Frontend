@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import ContactPage from '../Pages/ContactPage';
 import AboutPage from '../Pages/AboutPage';
+import About from '../Pages/About';
 
 import { useState } from 'react'
 import LoginForm from './Components/LoginForm'

@@ -1,8 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import '/Users/shakalivingstonepursuit/Hackathon-FrontEnd/Hackathon-Frontend/src/App.css'
-
+import '/src/App.css'
 
 
 const LoginForm =()=>{
@@ -22,9 +21,7 @@ const LoginForm =()=>{
     }
 }
 
-
-
-    return (<>
+   return (<>
 
 
     <form id="login-form" onSubmit={handleSubmit}>
@@ -38,17 +35,12 @@ const LoginForm =()=>{
         </label>
         <button type='submit'>Login</button>
 
-
-
-
     </form>
     
+ </>
+ )
     
-    </>)
-    
-
-
-
-
 }
+
+
 export default LoginForm

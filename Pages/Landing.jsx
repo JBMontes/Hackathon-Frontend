@@ -6,11 +6,6 @@ const LandingPage=()=>{
     const [searchLocation,setSearchLocation]=useState("")
 
 
-
-
-
-
-
 return (<>
     <h1>Header/nav Goes at Top of Page</h1>
 
