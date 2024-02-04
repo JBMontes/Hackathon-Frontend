@@ -17,7 +17,7 @@ const NavBar = () => {
  <nav className="navbar navbar-light bg-light py-4 px-3">
     <div className="container-fluid">
       <a className="navbar-brand fs-1 fw-bold" onClick={() => navigate("/")}>
-        GATEWAY
+        GATEKEY
        </a>
       <form className="d-flex">
       <Button
@@ -29,7 +29,7 @@ const NavBar = () => {
       </Button>
       <button 
       onClick={contactButton} 
-      clasName="btn btn-outline-success"
+      className="btn btn-outline-success"
        type="button"
        >
        CONTACT
