@@ -89,7 +89,7 @@ const tronMapStyles = [
 ];
 
 
-const GoogleMapsComponent = ({ places, userLocation, userAddress }) => {
+const GoogleMapsComponent = ({ locations, userLocation, userAddress }) => {
   const API_KEY = import.meta.env.VITE_API_KEY
   
   const center = userLocation && typeof userLocation.latitude === 'number' && typeof userLocation.longitude === 'number'
@@ -108,7 +108,7 @@ const GoogleMapsComponent = ({ places, userLocation, userAddress }) => {
   
 
   // const blackMarkerIcon = {
-  //   url: 'marker6.svg',
+  //   url: 'metal-key.png',
   //   scaledSize: new window.google.maps.Size(40, 40),
   // };
 
@@ -130,14 +130,12 @@ const GoogleMapsComponent = ({ places, userLocation, userAddress }) => {
           />
         )}
 
-        {places.map((place, index) => (
+{locations.map((location, index) => (
           <Marker
             key={index}
-            position={{ lat: place.geometry.location.lat, lng: place.geometry.location.lng }}
-            title={place.name}
-            onClick={() => onMarkerClick(place)}
+            position={{ lat: location.latitude, lng: location.longitude }}
+            title={location.name}
           />
-          
         ))}
         
         {selectedMarker && (
