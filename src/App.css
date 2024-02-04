@@ -12,7 +12,7 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #1e0b78c4);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
@@ -39,4 +39,50 @@
 
 .read-the-docs {
   color: #888;
+}
+
+#login-form{
+
+  background-color:  #060541;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 5px;
+  /* position: fixed; */
+  
+  
+}
+#pass{
+  margin-left:6px
+}
+
+
+#name,#color,#comment{
+  /* padding:20px; */
+  margin-bottom: 10px;
+}
+
+h3{
+  color: black;
+
+}
+
+.navbar-brand{
+  font-size: xx-large;
+  color:rgb(252,163,17);
+  font-family: 'Inter', sans-serif;
+  
+}
+
+.body{
+  background-color: black;
+}
+
+.userAddress{
+  font-size: large ;
+  color:rgb(252,163,17);
 }
