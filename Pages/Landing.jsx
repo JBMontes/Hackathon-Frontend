@@ -9,6 +9,7 @@ const LandingPage = () => {
         <>
             <CreateCard />
             <FetchLocation />
+            <h1>New GateKeys Added!</h1>
             <GateKeyFeed />
         </>
     );

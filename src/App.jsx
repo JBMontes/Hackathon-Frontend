@@ -16,8 +16,8 @@ function App() {
       <Router>
         <NavBar />
         <Routes>
-      < Route path='/login' element={<LoginForm/>}/>
-      < Route path='/' element={<LandingPage/>}/>
+      < Route path='/' element={<LoginForm/>}/>
+      < Route path='/landing' element={<LandingPage/>}/>
         <Route path="/contact" element={< ContactPage />} />
         <Route path="/about" element={< AboutPage />} />
         <Route path="/form" element={<CreateCard/>}/>

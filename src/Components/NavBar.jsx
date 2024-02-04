@@ -16,7 +16,7 @@ const NavBar = () => {
 
  <nav className="navbar navbar-light bg-light py-4 px-3">
     <div className="container-fluid">
-      <a className="navbar-brand fs-1 fw-bold" onClick={() => navigate("/")}>
+      <a className="navbar-brand fs-1 fw-bold" onClick={() => navigate("/landing")}>
         GATEKEY
        </a>
       <form className="d-flex">
@@ -34,6 +34,13 @@ const NavBar = () => {
        >
        CONTACT
        </button>
+       <Button
+      className="btn btn-outline-success" 
+      onClick={() => navigate("/keypins")}
+      type="button"
+      >
+     FEED
+      </Button>
      </form>
     </div>
    </nav>

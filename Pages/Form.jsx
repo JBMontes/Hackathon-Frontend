@@ -46,12 +46,14 @@ const CreateCard = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="form1" onSubmit={handleSubmit}>
         <label htmlFor="name"> Name:</label>
         <input id="name" value={name} type="text" onChange={(e)=>{setName(e.target.value)}}  />
         <br />
         <label htmlFor="color">Color:</label>
+        
         <input id="color" value={color} type="text" onChange={(e)=>{setColor(e.target.value)}}  />
+        <br />
         <label htmlFor="address">Address:</label>
         <input id="address"  value={address}type="text" onChange={(e)=>{setAddress(e.target.value)}}  />
         <br />

@@ -59,12 +59,7 @@ function GateKeyDetails() {
            </p>
            <p>"{gateKeyCard.comment}"</p>
            <div className="showNavigation">
-               <div>
-                   <Link to={`/keypins/${id}/edit`}>
-                       <button>Edit</button>
-                   </Link>
-                   <button onClick={handleDelete}>Delete</button>
-               </div>
+               
                <div>
                    <Link to={`/keypins`}>
                        <button>Back to Gatekeys</button>

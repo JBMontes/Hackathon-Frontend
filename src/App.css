@@ -86,3 +86,27 @@ h3{
   font-size: large ;
   color:rgb(252,163,17);
 }
+
+.gatekey-details {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gatekey-card {
+  flex: 1 0 calc(25% - 20px); /* 25% width with some margin */
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.form1{
+  text-align: center;
+gap: 5px;
+  display: flex;
+  flex-direction: row ;
+  align-items: center;
+  justify-content: center;
+
+
+
+}
