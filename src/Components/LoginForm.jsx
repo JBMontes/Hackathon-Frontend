@@ -18,7 +18,7 @@ const LoginForm =()=>{
     const handleSubmit=()=>{
     if(username===user&&password===pass){
 
-            navigate("/home")
+            navigate("/")
     }
 }
 
