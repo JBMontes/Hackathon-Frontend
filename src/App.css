@@ -53,6 +53,14 @@
 #pass{
   margin-left:6px
 }
+
+
+#name,#color,#comment{
+  /* padding:20px; */
+  margin-bottom: 10px;
+  
+
 h3{
   color: black;
+
 }
