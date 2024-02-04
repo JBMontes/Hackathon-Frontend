@@ -1,17 +1,17 @@
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import NavBar from './Components/NavBar'
-import HomePage from './HomePage';
-import ContactPage from './Components/ContactPage'
-import AboutPage from './Components/AboutPage'
+
+
+import ContactPage from '../Pages/ContactPage';
+import AboutPage from '../Pages/AboutPage';
 
 import { useState } from 'react'
 import LoginForm from './Components/LoginForm'
+import HomePage from '../Pages/Home';
 
 
-
-import 'src/App.css'
+import './App.css'
 import FetchLocation from './Components/FetchLocation'
 import LandingPage from '../Pages/Landing'
 function App() {
