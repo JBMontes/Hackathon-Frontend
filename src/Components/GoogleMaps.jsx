@@ -89,7 +89,7 @@ const tronMapStyles = [
 ];
 
 
-const GoogleMapsComponent = ({ locations, userLocation, userAddress }) => {
+const GoogleMapsComponent = ({ locations, userLocation }) => {
   const API_KEY = import.meta.env.VITE_API_KEY
   
   const center = userLocation && typeof userLocation.latitude === 'number' && typeof userLocation.longitude === 'number'
@@ -98,8 +98,8 @@ const GoogleMapsComponent = ({ locations, userLocation, userAddress }) => {
   
   const [selectedMarker, setSelectedMarker] = useState(null);
 
-  const onMarkerClick = (place) => {
-    setSelectedMarker(place);
+  const onMarkerClick = (location) => {
+    setSelectedMarker(location);
   };
 
   const onInfoWindowClose = () => {
@@ -135,14 +135,15 @@ const GoogleMapsComponent = ({ locations, userLocation, userAddress }) => {
             key={index}
             position={{ lat: location.latitude, lng: location.longitude }}
             title={location.name}
+            onClick={() => onMarkerClick(location)} 
           />
         ))}
         
         {selectedMarker && (
           <InfoWindow
             position={{
-              lat: selectedMarker.geometry.location.lat,
-              lng: selectedMarker.geometry.location.lng,
+              lat: selectedMarker.latitude,
+              lng: selectedMarker.longitude,
             }}
             onCloseClick={onInfoWindowClose}
           >
@@ -156,8 +157,8 @@ const GoogleMapsComponent = ({ locations, userLocation, userAddress }) => {
       <p>No photo available</p>
     )}
               <h3>Name: {selectedMarker.name}</h3>
-              <h3>Location: {selectedMarker.vicinity}</h3>
-              <h3>Rating: {selectedMarker.rating}</h3>
+              <h3>Location: {selectedMarker.color}</h3>
+              <h3>Rating: {selectedMarker.comment}</h3>
              
             </div>
           </InfoWindow>
