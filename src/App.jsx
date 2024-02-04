@@ -10,7 +10,7 @@ import { useState } from 'react'
 import LoginForm from './Components/LoginForm'
 import HomePage from '../Pages/Home';
 
-
+import NavBar from './Components/NavBar';
 import './App.css'
 import FetchLocation from './Components/FetchLocation'
 import LandingPage from '../Pages/Landing'
@@ -20,6 +20,7 @@ function App() {
 
     <>
       <Router>
+        <NavBar />
         <Routes>
       < Route path='/login' element={<LoginForm/>}/>
       < Route path='/home' element={<LandingPage/>}/>

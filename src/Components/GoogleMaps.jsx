@@ -92,6 +92,8 @@ const tronMapStyles = [
 const GoogleMapsComponent = ({ locations, userLocation }) => {
   const API_KEY = import.meta.env.VITE_API_KEY
   
+ 
+
   const center = userLocation && typeof userLocation.latitude === 'number' && typeof userLocation.longitude === 'number'
   ? { lat: userLocation.latitude, lng: userLocation.longitude }
   : { lat: 40.712776, lng: -74.005974 };
@@ -105,12 +107,6 @@ const GoogleMapsComponent = ({ locations, userLocation }) => {
   const onInfoWindowClose = () => {
     setSelectedMarker(null);
   };
-  
-
-  // const blackMarkerIcon = {
-  //   url: 'metal-key.png',
-  //   scaledSize: new window.google.maps.Size(40, 40),
-  // };
 
   return (
     <LoadScript googleMapsApiKey={API_KEY}>
@@ -126,7 +122,8 @@ const GoogleMapsComponent = ({ locations, userLocation }) => {
           <Marker
             position={{ lat: userLocation.latitude, lng: userLocation.longitude }}
             title="Your Location"
-            // icon={blackMarkerIcon}
+            icon={{  url: 'logoKey.png',
+            scaledSize: new window.google.maps.Size(40, 40),}}
           />
         )}
 
@@ -157,8 +154,8 @@ const GoogleMapsComponent = ({ locations, userLocation }) => {
       <p>No photo available</p>
     )}
               <h3>Name: {selectedMarker.name}</h3>
-              <h3>Location: {selectedMarker.color}</h3>
-              <h3>Rating: {selectedMarker.comment}</h3>
+              <h3>Color: {selectedMarker.color}</h3>
+              <h3>Comment: {selectedMarker.comment}</h3>
              
             </div>
           </InfoWindow>
