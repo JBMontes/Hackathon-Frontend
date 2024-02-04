@@ -34,6 +34,16 @@ const NavBar = () => {
        >
        CONTACT
        </button>
+       <Button
+      className="btn btn-outline-success" 
+      onClick={() => navigate("/form")}
+      type="button"
+      >
+      FORM
+      </Button>
+
+
+
      </form>
     </div>
    </nav>

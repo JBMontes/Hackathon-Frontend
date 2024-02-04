@@ -1,8 +1,13 @@
 import React from 'react';
 
+import LoginForm from '../src/Components/LoginForm';
+
 const HomePage = () => {
     return (
-        <h1>Home Page</h1>
+        <>
+        <LoginForm/>
+        
+        </>
     );
 };
 
